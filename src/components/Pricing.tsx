@@ -2,7 +2,7 @@ import { Check } from "lucide-react";
 import { useScrollFadeIn } from "@/hooks/useScrollFadeIn";
 
 const free = [
-  "Análise da sua multa pela IA",
+  "Análise da sua multa pelo time júridico",
   "Probabilidade de sucesso",
   "Estratégia de defesa recomendada",
   "Prazo legal para recurso",

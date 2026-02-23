@@ -20,6 +20,7 @@ export type Database = {
           created_at: string
           description: string
           email: string
+          fine_amount: string | null
           id: string
           infraction: string
           name: string
@@ -30,6 +31,7 @@ export type Database = {
           created_at?: string
           description: string
           email: string
+          fine_amount?: string | null
           id?: string
           infraction: string
           name: string
@@ -40,6 +42,7 @@ export type Database = {
           created_at?: string
           description?: string
           email?: string
+          fine_amount?: string | null
           id?: string
           infraction?: string
           name?: string

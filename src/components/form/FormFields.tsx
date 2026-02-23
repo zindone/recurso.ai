@@ -38,6 +38,7 @@ const FormFields = ({ form, set, isValid, onSubmit }: Props) => {
         <option value="">Tipo de infração</option>
         {infractions.map((i) => <option key={i} value={i}>{i}</option>)}
       </select>
+      <input className={inputClass} type="text" placeholder="Valor da multa (ex: R$ 195,23)" value={form.fineAmount} onChange={(e) => set("fineAmount", e.target.value)} required />
       <textarea
         className={`${inputClass} min-h-[100px] resize-none`}
         placeholder="Ex: Recebi uma multa de radar mas o limite de velocidade não estava sinalizado na via..."

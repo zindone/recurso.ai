@@ -10,6 +10,7 @@ export interface FormData {
   email: string;
   whatsapp: string;
   infraction: string;
+  fineAmount: string;
   description: string;
   belief: string;
   terms: boolean;
@@ -20,6 +21,7 @@ export const initialForm: FormData = {
   email: "",
   whatsapp: "",
   infraction: "",
+  fineAmount: "",
   description: "",
   belief: "",
   terms: false,
@@ -33,7 +35,7 @@ const FormSection = () => {
     setForm((prev) => ({ ...prev, [key]: value }));
 
   const isValid =
-    form.name && form.email && form.whatsapp && form.infraction && form.description && form.belief && form.terms;
+    form.name && form.email && form.whatsapp && form.infraction && form.fineAmount && form.description && form.belief && form.terms;
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -46,6 +48,7 @@ const FormSection = () => {
         email: form.email.trim(),
         whatsapp: form.whatsapp.trim(),
         infraction: form.infraction,
+        fine_amount: form.fineAmount.trim(),
         description: form.description.trim(),
         belief: form.belief,
       });

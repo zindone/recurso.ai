@@ -1,4 +1,6 @@
 import { useState, type FormEvent } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/hooks/use-toast";
 import FormFields from "./form/FormFields";
 import FormLoading from "./form/FormLoading";
 import FormResult from "./form/FormResult";
@@ -33,10 +35,26 @@ const FormSection = () => {
   const isValid =
     form.name && form.email && form.whatsapp && form.infraction && form.description && form.belief && form.terms;
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     if (!isValid) return;
     setPhase("loading");
+
+    try {
+      const { error } = await supabase.from("leads").insert({
+        name: form.name.trim(),
+        email: form.email.trim(),
+        whatsapp: form.whatsapp.trim(),
+        infraction: form.infraction,
+        description: form.description.trim(),
+        belief: form.belief,
+      });
+      if (error) throw error;
+    } catch (err) {
+      console.error("Failed to save lead:", err);
+      toast({ title: "Erro ao salvar dados", description: "Tente novamente.", variant: "destructive" });
+    }
+
     setTimeout(() => setPhase("result"), 4000);
   };
 

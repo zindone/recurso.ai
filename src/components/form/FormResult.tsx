@@ -41,7 +41,7 @@ const offerItems = [
 const FormResult = ({ form, onReset }: Props) => {
   const config = beliefConfig[form.belief as keyof typeof beliefConfig] ?? beliefConfig["Talvez"];
 
-  const whatsappUrl = `https://wa.me/5500000000000?text=${encodeURIComponent(
+  const whatsappUrl = `https://wa.me/5531971142703?text=${encodeURIComponent(
     `Olá! Fiz o diagnóstico no Recurso.AI e quero gerar meu recurso completo. Meu nome é ${form.name} e recebi uma multa de ${form.infraction}.`
   )}`;
 

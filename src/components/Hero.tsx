@@ -30,6 +30,12 @@ const Hero = () => {
           A burocracia é real — mas agora existe uma saída simples, rápida e barata.
         </p>
 
+        <div className="bg-destructive/15 border-2 border-destructive/30 rounded-lg px-6 py-4 mb-8 max-w-2xl mx-auto">
+          <p className="text-destructive font-semibold text-base md:text-lg flex items-center justify-center gap-2">
+            ⚠️ Atenção: o prazo para recorrer expira em até 30 dias
+          </p>
+        </div>
+
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
           <button
             onClick={() => scrollTo("formulario")}

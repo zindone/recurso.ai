@@ -108,9 +108,9 @@ const FormResult = ({ form, onReset }: Props) => {
           ))}
         </ul>
         <div className="text-center space-y-1">
-          <p className="text-sm line-through text-accent-foreground/50">Advogado: R$ 300–800</p>
-          <p className="text-3xl font-extrabold">R$ 49,90</p>
-          <p className="text-xs text-accent-foreground/60">pagamento único • sem mensalidade</p>
+          <p className="text-sm line-through text-accent-foreground/50">Advogado: R$ 500–800</p>
+          <p className="text-3xl font-extrabold">R$ 00,00</p>
+          <p className="text-xs text-accent-foreground/60">sem pagamento • sem mensalidade</p>
         </div>
       </div>
 
